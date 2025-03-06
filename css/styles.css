@@ -1,0 +1,311 @@
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(104, 53, 30);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Charm', cursive;
+}
+
+p, a, label, button {
+    font-family: 'DM Serif Text', serif;
+}
+header {
+    background-color: rgb(147, 76, 43);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.logo svg {
+    position: absolute;
+    height: auto;
+    width: 20vh;
+}
+.logo svg circle {
+    fill: gold;
+    stroke: black;
+    stroke-width: 2%;
+    cx: 50%;
+    cy: 50%;
+    r: 30%;
+}
+.logo img {
+    z-index: 1;
+    height: 15vh;
+    width: auto;
+}
+
+
+menu {
+    display: flex;
+    flex-direction: row;
+}
+nav menu li {
+    list-style: none;
+    padding: 1vw;
+    margin: 1vw;
+    color: white;
+    font-size: 1.5em;
+}
+
+nav menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+nav menu li a:hover {
+    color: rgb(104, 53, 30);
+    background-color: white;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#masthead {
+    height: 100vh;
+    background-image: url('../images/CaramelCoffeeInfoSmall.png');
+    background-size: cover;
+    background-position: center;
+}
+#masthead h2 {
+    font-size: 3em;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow, .arrow::before {
+    width: 5vh;
+    height: 5vh;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: rotate(-45deg);
+}
+
+.arrow::after {
+    width: 50%;
+    height: 50%;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    position: absolute;
+    content: '';
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-duration: 3s;
+
+}
+
+@keyframes arrow {
+    0% {
+        top: 0%;
+        right: 0%;
+        opacity: 0;
+    }
+    50% {
+        top: 50%;
+        right: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+    
+}
+#products h2 {
+    font-size: 2.5em;
+}
+#products {
+    display: flex;
+    flex-flow: column;
+    background: radial-gradient(circle, rgba(147, 76, 43, 1) 30%, rgba(48, 18, 4, 1) 100%);
+    color: white;
+    height: 100vh;
+}
+
+
+.slider {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+}
+.slider-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 90%;
+    transition: left 0.5s;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.slider-images > img {
+    width: 12.5%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.slider-button {
+    z-index: 10;
+    margin: 1vw;
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+.slider-button:checked:nth-of-type(1) ~ .slider-images {
+    left: 0%;
+}
+.slider-button:checked:nth-of-type(2) ~ .slider-images {
+    left: -100%;
+}
+.slider-button:checked:nth-of-type(3) ~ .slider-images {
+    left: -200%;
+}
+.slider-button:checked:nth-of-type(4) ~ .slider-images {
+    left: -300%;
+}
+#history {
+    background-color: rgb(147, 76, 43);
+    color: white;
+    text-align: left;
+}
+#history > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#history > div > div {
+    display: flex;
+    flex-direction: column;
+}
+#history h2 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 1vw;
+    margin: .5vw;
+}
+#history p {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 3em;
+}
+
+#history img {
+    z-index: 1;
+    width: 50%;
+    
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+}
+
+footer {
+    background-color: rgb(104, 53, 30);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer p {
+    padding: 1.5vh;
+    margin: 0;
+    font-size: 1em;
+    line-height: 0em;
+}
+.space-out {
+    margin-top: 1.5vh;
+}
+
+footer div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+footer a:hover {
+    color: rgb(209, 122, 23);
+    transform: translate(0, -1px);
+}
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1vh;
+    align-items: center;
+    margin-bottom: 1.5vh;
+}
+form input, form textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+footer h4 {
+    margin: 2vh;
+    border-bottom: #f5f5f5 2px solid;
+    width: auto;
+    padding: 1vw;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+footer button {
+    background-color: rgb(147, 76, 43);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.15s linear;
+}
+footer button:hover {
+    background-color: white;
+    color: rgb(147, 76, 43);
+}

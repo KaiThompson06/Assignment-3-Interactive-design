@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="A basic advertising page for Werther's Original">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Werther's Original</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div>
+            <div class="logo">
+                <svg>
+                    <circle r="40">
+                </svg>
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <h1>Werther's Original</h1>
+        </div>
+        
+        <nav>
+            <menu>
+                <li><a href="">Start</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#history">History</a></li>
+            </menu>
+        </nav>
+    </header>
+
+    <section id="masthead">
+        <h2>Werther's Original Coffee Caramel Candy</h2>
+        <div class="arrow"></div>
+    </section>
+    <main>
+        <section id="products">
+            <h2>Werther's Original Products</h2>
+            <div class="slider">
+                <div></div>
+                <input type="radio" name="slider" id="slide1" class="slider-button" checked>
+                <input type="radio" name="slider" id="slide2" class="slider-button">
+                <input type="radio" name="slider" id="slide3" class="slider-button">
+                <input type="radio" name="slider" id="slide4" class="slider-button">    
+            
+                <div class="slider-images">
+                    <img src="images/products/CaramelCoffee.png" alt="image1">
+                    <img src="images/products/ButterCandies.png" alt="image2">
+                    <img src="images/products/SoftEclairs.png" alt="image3">
+                    <img src="images/products/AppleFilled.png" alt="image4">
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2>Werther's History And Facts</h2>
+            <div>
+                <img src="images/werthersHistory-Photoroom.png" alt="man with candy">
+                <div>
+                    <p>Werther's Original was created in 1909 in the town of Werther, Germany by the confectioner Gustav Nebel.</p>
+                    <p>He used a mix of cream, butter, white sugar, brown rock sugar, and a pinch of salt to create the original Butter Candy.</p>
+                    <p>Werther's Original now has over a dozen products in over 100 countries!</p>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+    <footer>
+        <div class="logo">
+            <svg>
+                <circle r="40">
+            </svg>
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <div>
+            <h4>Werther's Original</h4>
+            <p>STORCK CANADA INC.</p>
+            <p>2 Robert Speck Pkwy</p>
+            <p>Suite 695</p>
+            <p>Mississauga, Ontario L4Z 1H8</p>
+            <p>Canada</p>
+            <a href="https://www.werthers-original.com/" class="space-out">werthers-original.com</a>
+        </div>
+
+        <div>
+            <h4>Contact Us</h4>
+            <form>
+                <label for="name">Name: </label>
+                <input type="text" placeholder="Name" id="name">
+                
+                <label for="email">Email: </label>
+                <input type="email" placeholder="Email" id="email">
+
+                <label for="message">Message: </label>
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                
+            </form>
+            <button>Send!</button>
+        </div>
+        
+    </footer>
+</body>
+</html>
