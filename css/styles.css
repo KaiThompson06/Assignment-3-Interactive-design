@@ -3,7 +3,6 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: rgb(104, 53, 30);
     margin: 0;
     padding: 0;
@@ -11,6 +10,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Charm', cursive;
+    letter-spacing: .1vw;
 }
 
 p, a, label, button {
@@ -69,6 +69,7 @@ nav menu li a {
     color: white;
     padding: 5px;
     border-radius: 5px;
+    letter-spacing: .1vw;
     transition: all 0.3s linear;
 }
 
